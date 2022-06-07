@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <AssemblyName>WindowsInputPlus.NetStandard</AssemblyName>
+    <AssemblyName>MaSch.WindowsInputPlus.NetStandard</AssemblyName>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <OutputType>Library</OutputType>
