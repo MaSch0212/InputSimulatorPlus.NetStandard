@@ -1,12 +1,12 @@
 # Windows Input Simulator Plus
-[![Build Status](https://dev.azure.com/masch0212/MaSch/_apis/build/status/MaSch0212.InputSimulatorPlus.NetStandard?branchName=master)](https://dev.azure.com/masch0212/MaSch/_build/latest?definitionId=9&branchName=master) [![NuGet](https://img.shields.io/nuget/v/MaSch.InputSimulatorPlus.NetStandard.svg)](https://www.nuget.org/packages/MaSch.InputSimulatorPlus.NetStandard/)
+[![Build Status](https://dev.azure.com/masch0212/MaSch/_apis/build/status/MaSch0212.InputSimulatorPlus.NetStandard?branchName=master)](https://dev.azure.com/masch0212/MaSch/_build/latest?definitionId=9&branchName=master) [![NuGet](https://img.shields.io/nuget/v/InputSimulatorPlus.NetStandard.svg)](https://www.nuget.org/packages/InputSimulatorPlus.NetStandard/)
 
 This library is a fork of Michael Noonan's *Windows Input Simulator* (a C# wrapper around the `SendInput` functionality of Windows) and it can be used as a replacement of the original library without any source code changes. 
 
 This fork supports scan codes, making it compatible with many applications that the original library does not support. 
 
 ## NuGet
-Install-Package MaSch.InputSimulatorPlus.NetStandard
+Install-Package InputSimulatorPlus.NetStandard
 
 # Examples
 

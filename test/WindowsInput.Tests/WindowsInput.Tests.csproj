@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>WindowsInput.snk</AssemblyOriginatorKeyFile>
     
-    <OutputPath>..\bin\$(Configuration)</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)</OutputPath>
 
     <Copyright>Copyright © michaelnoonan 2010</Copyright>
     <Version>0.2.0.0</Version>
