@@ -4,7 +4,7 @@ This library is a fork of Michael Noonan's *Windows Input Simulator* (a C# wrapp
 This fork supports scan codes, making it compatible with many applications that the original library does not support. 
 
 ## NuGet
-Install-Package InputSimulatorPlus
+Install-Package InputSimulatorPlus.NetStandard
 
 # Examples
 
