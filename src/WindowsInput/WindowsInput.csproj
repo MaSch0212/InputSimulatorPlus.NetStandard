@@ -13,7 +13,8 @@
     <OutputPath>..\..\bin\$(Configuration)</OutputPath>
     <DocumentationFile>..\..\bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 
-    <Title>Windows Input Simulator Plus</Title>
+    <PackageId>InputSimulatorPlus.NetStandard</PackageId>
+    <Title>Windows Input Simulator Plus (.NET Standard)</Title>
     <Description>Fork of the Windows Input Simulator Plus build against .NET Standard. Windows Input Simulator Plus is a fork of the original Windows Input Simulator with scan code support for increased compatibility.</Description>
     <Product>WindowsInputPlus</Product>
     <Company>Marc Schmidt</Company>
