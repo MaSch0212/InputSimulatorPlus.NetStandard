@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
@@ -72,21 +73,19 @@ namespace WindowsInput.Tests.UnicodeText
 
         [Test]
         [Explicit]
-        public void GetCharacterRanges()
+        public async Task GetCharacterRanges()
         {
-            using (var client = new WebClient())
+            using var client = new HttpClient();
+            var html = await client.GetStringAsync("http://jrgraphix.net/r/Unicode/");
+            var htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(html);
+            foreach (var link in htmlDoc.DocumentNode.SelectNodes("//a[@href]"))
             {
-                var html = client.DownloadString("http://jrgraphix.net/r/Unicode/");
-                var htmlDoc = new HtmlDocument();
-                htmlDoc.LoadHtml(html);
-                foreach (var link in htmlDoc.DocumentNode.SelectNodes("//a[@href]"))
+                var a = link.GetAttributeValue("href", "unknown");
+                if (a.Contains("Unicode"))
                 {
-                    var a = link.GetAttributeValue("href", "unknown");
-                    if (a.Contains("Unicode"))
-                    {
-                        a = "0x" + a.Replace("/r/Unicode/", "").Replace("-", ", 0x") + "),";
-                        Console.WriteLine("new UnicodeRange(\"" + link.InnerText + "\", " + a);
-                    }
+                    a = "0x" + a.Replace("/r/Unicode/", "").Replace("-", ", 0x") + "),";
+                    Console.WriteLine("new UnicodeRange(\"" + link.InnerText + "\", " + a);
                 }
             }
         }
