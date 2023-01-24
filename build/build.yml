@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'windows-2022'
 
+variables:
+- group: 'NuGet'
+
 steps:
 - checkout: self
   clean: true
